@@ -1,11 +1,11 @@
 /* Paleta de Cores do Logo VISION */
 :root {
-    --color-dark-blue: #00071C; /* Fundo escuro do logo */
-    --color-gold: #B58C36;     /* Dourado do logo */
-    --color-light-gray: #C0C7CE; /* Cinza/azul claro para detalhes */
-    --color-medium-gray: #444C56; /* Cinza médio para textos em fundos claros */
+    --color-dark-blue: #00071C;
+    --color-gold: #B58C36;
+    --color-light-gray: #C0C7CE;
+    --color-medium-gray: #444C56;
     --color-white: #ffffff;
-    --color-whatsapp-green: #25D366; /* Verde original do WhatsApp */
+    --color-whatsapp-green: #25D366;
 }
 
 /* Import de fontes do Google */
@@ -16,7 +16,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth; /* Rolagem suave ao clicar nos links internos */
+    scroll-behavior: smooth;
 }
 
 body {
@@ -40,7 +40,7 @@ body {
 .section-tagline {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.9em;
-    color: var(--color-gold); /* Dourado para tags */
+    color: var(--color-gold);
     text-transform: uppercase;
     letter-spacing: 1.5px;
     margin-bottom: 10px;
@@ -50,20 +50,20 @@ body {
 .section-modern h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 3.2em;
-    color: var(--color-dark-blue); /* Títulos em azul escuro */
+    color: var(--color-dark-blue);
     margin-bottom: 50px;
     font-weight: 700;
 }
 
 /* Destaque para palavras */
 .highlight {
-    color: var(--color-gold); /* Palavras destacadas em dourado */
+    color: var(--color-gold);
 }
 
 /* Cores de Fundo das Seções */
 .bg-dark-section {
     background-color: var(--color-dark-blue);
-    color: var(--color-light-gray); /* Texto claro em fundo escuro */
+    color: var(--color-light-gray);
 }
 .bg-dark-section h2, .bg-dark-section p, .bg-dark-section strong {
     color: var(--color-light-gray);
@@ -74,7 +74,7 @@ body {
 
 
 .bg-light-section {
-    background-color: var(--color-light-gray); /* Fundo cinza claro */
+    background-color: var(--color-light-gray);
     color: var(--color-medium-gray);
 }
 .bg-light-section h2 {
@@ -83,7 +83,7 @@ body {
 
 .bg-gold-section {
     background-color: var(--color-gold);
-    color: var(--color-dark-blue); /* Texto escuro em fundo dourado */
+    color: var(--color-dark-blue);
 }
 .bg-gold-section h2, .bg-gold-section p {
     color: var(--color-dark-blue);
@@ -108,31 +108,26 @@ body {
 }
 
 .btn-primary-modern {
-    background-color: var(--color-gold); /* Botão primário em dourado */
-    color: var(--color-dark-blue); /* Texto do botão primário em azul escuro */
+    background-color: var(--color-gold);
+    color: var(--color-dark-blue);
 }
 
 .btn-primary-modern:hover {
-    background-color: #A37C2F; /* Dourado um pouco mais escuro no hover */
+    background-color: #A37C2F;
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 .btn-secondary-modern {
     background-color: transparent;
-    border: 2px solid var(--color-light-gray); /* Borda em cinza claro */
-    color: var(--color-light-gray); /* Texto em cinza claro */
+    border: 2px solid var(--color-medium-gray);
+    color: var(--color-medium-gray);
 }
 
-.hero-modern .btn-secondary-modern { /* Específico para o hero, se tiver */
-    border-color: var(--color-gold);
+#sobre .btn-secondary-modern:hover {
+    background-color: var(--color-dark-blue);
     color: var(--color-gold);
-}
-
-
-.btn-secondary-modern:hover {
-    background-color: var(--color-dark-blue); /* Fundo escuro no hover */
-    color: var(--color-gold); /* Texto dourado no hover */
+    border-color: var(--color-dark-blue);
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
@@ -151,11 +146,11 @@ body {
     z-index: 1000;
     padding: 20px 0;
     transition: background-color 0.3s ease, padding 0.3s ease;
-    background-color: transparent; /* Começa transparente */
+    background-color: transparent;
 }
 
 .main-header.scrolled {
-    background-color: rgba(0, 7, 28, 0.95); /* Cor sólida ao rolar (var(--color-dark-blue) com transparência) */
+    background-color: rgba(0, 7, 28, 0.95);
     padding: 15px 0;
     box-shadow: 0 2px 10px rgba(0,0,0,0.4);
 }
@@ -167,15 +162,15 @@ body {
 }
 
 .main-header .logo-img {
-    max-height: 40px; /* Ajuste o tamanho do logo conforme necessário */
+    max-height: 50px; /* Aumentado um pouco para melhor visualização */
     transition: max-height 0.3s ease;
 }
 
 .main-header.scrolled .logo-img {
-    max-height: 35px; /* Logo um pouco menor ao rolar */
+    max-height: 40px;
 }
 
-.main-nav ul {
+.main-nav .nav-links {
     list-style: none;
     display: flex;
     gap: 30px;
@@ -183,17 +178,27 @@ body {
 
 .main-nav a {
     text-decoration: none;
-    color: var(--color-light-gray); /* Cor dos links no header transparente */
+    color: var(--color-light-gray);
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
-.main-header.scrolled .main-nav a {
-    color: var(--color-light-gray); /* Cor dos links quando rolado */
+.main-nav a:hover {
+    color: var(--color-gold);
 }
 
-.main-nav a:hover {
-    color: var(--color-gold); /* Links em dourado no hover */
+/* ADIÇÃO: Estilo do ícone hambúrguer (escondido em telas grandes) */
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-light-gray);
+    margin: 5px;
+    transition: all 0.3s ease;
 }
 
 /* Hero Section (Inovador) */
@@ -205,7 +210,6 @@ body {
     align-items: center;
     color: var(--color-white);
     text-align: center;
-    /* Imagem de fundo da oficina, pode ser uma que combine com o tema */
     background: url("../images/two-men-working-on-a-car-in-a-garage-free-video.jpg") no-repeat center center/cover;
 }
 
@@ -215,7 +219,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 41, 92, 0.75 ); /* Overlay azul escuro para texto se destacar */
+    background-color: rgba(0, 7, 28, 0.75);
     z-index: 1;
 }
 
@@ -230,7 +234,7 @@ body {
     letter-spacing: 2px;
     margin-bottom: 20px;
     font-weight: 600;
-    color: var(--color-light-gray); /* Subtítulo em cinza claro */
+    color: var(--color-light-gray);
 }
 
 .hero-content-modern h1 {
@@ -239,7 +243,7 @@ body {
     line-height: 1.1;
     margin-bottom: 40px;
     font-weight: 700;
-    color: var(--color-white); /* Título principal em branco */
+    color: var(--color-white);
 }
 
 /* Seção Sobre Nós */
@@ -257,26 +261,32 @@ body {
 .section-about .about-content h2 {
     text-align: left;
     margin-bottom: 30px;
-    color: var(--color-dark-blue);
 }
 
 .section-about .about-content p {
     margin-bottom: 20px;
     font-size: 1.1em;
-    color: var(--color-medium-gray);
 }
 
-.section-about .about-image {
+.about-image {
     flex: 1;
     min-height: 400px;
-    background: url('https://images.unsplash.com/photo-1544652230-10a9c1482f7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEzfHxtZWNoYW5pYyUyMGdheXxlbnwwfHx8fDE2NzQwMzMyNDQ&ixlib=rb-1.2.1&q=80&w=1200') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
     border-radius: 12px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cobre o container sem distorcer a imagem */
 }
 
 /* Seção de Serviços */
 .section-services {
-    background-color: var(--color-light-gray); /* Fundo cinza claro */
+    background-color: var(--color-light-gray);
 }
 
 .services-grid {
@@ -302,7 +312,7 @@ body {
 
 .service-card .icon-service {
     font-size: 3.5em;
-    color: var(--color-gold); /* Ícones de serviço em dourado */
+    color: var(--color-gold);
     margin-bottom: 25px;
     display: block;
 }
@@ -315,24 +325,11 @@ body {
     font-weight: 700;
 }
 
-.service-card p {
-    font-size: 1em;
-    color: var(--color-medium-gray);
-}
-
 /* Seção Diferenciais/Benefícios */
 .section-benefits {
-    background-color: var(--color-dark-blue); /* Fundo azul escuro */
+    background-color: var(--color-dark-blue);
     color: var(--color-light-gray);
 }
-
-.section-benefits h2, .section-benefits .section-tagline {
-    color: var(--color-light-gray);
-}
-.section-benefits .benefits-list {
-    color: var(--color-light-gray);
-}
-
 
 .benefits-list {
     display: grid;
@@ -344,30 +341,23 @@ body {
 
 .benefit-item-modern {
     display: flex;
-    align-items: flex-start;
+    align-items: center; /* Alinhado ao centro para melhor visualização */
     gap: 20px;
-    background-color: rgba(192, 199, 206, 0.1); /* Fundo levemente transparente do cinza claro */
+    background-color: rgba(192, 199, 206, 0.1);
     padding: 25px;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .benefit-item-modern .benefit-icon-modern {
     font-size: 2.5em;
-    color: var(--color-gold); /* Ícones de benefício em dourado */
+    color: var(--color-gold);
     flex-shrink: 0;
-    margin-top: 5px;
-}
-
-.benefit-item-modern p {
-    font-size: 1.1em;
-    color: var(--color-light-gray);
 }
 
 /* Seção CTA Final */
 .section-cta-final {
-    background-color: var(--color-gold); /* Fundo dourado */
-    color: var(--color-dark-blue); /* Texto em azul escuro */
+    background-color: var(--color-gold);
+    color: var(--color-dark-blue);
     padding: 80px 0;
 }
 
@@ -380,12 +370,11 @@ body {
     font-size: 1.2em;
     margin-bottom: 40px;
     font-weight: 300;
-    color: var(--color-dark-blue);
 }
 
 /* Seção de Contato */
 .section-contact {
-    background-color: var(--color-light-gray); /* Fundo cinza claro */
+    background-color: var(--color-light-gray);
 }
 
 .contact-grid-modern {
@@ -394,6 +383,7 @@ body {
     gap: 60px;
     text-align: left;
     margin-top: 60px;
+    align-items: center; /* Alinha os itens verticalmente */
 }
 
 .contact-details p {
@@ -402,13 +392,14 @@ body {
     display: flex;
     align-items: center;
     gap: 18px;
-    color: var(--color-medium-gray);
 }
 
 .contact-details .icon-contact {
     font-size: 1.5em;
-    color: var(--color-gold); /* Ícones de contato em dourado */
+    color: var(--color-gold);
     flex-shrink: 0;
+    width: 25px; /* Define uma largura fixa para alinhar o texto */
+    text-align: center;
 }
 
 .social-links-modern {
@@ -418,13 +409,13 @@ body {
 }
 
 .social-links-modern a {
-    color: var(--color-dark-blue); /* Ícones sociais em azul escuro */
+    color: var(--color-dark-blue);
     font-size: 2em;
     transition: color 0.3s ease;
 }
 
 .social-links-modern a:hover {
-    color: var(--color-gold); /* Ícones sociais em dourado no hover */
+    color: var(--color-gold);
 }
 
 .contact-map-modern {
@@ -453,7 +444,7 @@ body {
 .whatsapp-fixed a {
     display: flex;
     align-items: center;
-    background-color: var(--color-whatsapp-green); /* Mantém o verde padrão do WhatsApp */
+    background-color: var(--color-whatsapp-green);
     color: var(--color-white);
     padding: 15px 25px;
     border-radius: 50px;
@@ -467,7 +458,7 @@ body {
 
 .whatsapp-fixed a:hover {
     transform: translateY(-5px);
-    background-color: #1DA851; /* Verde WhatsApp mais escuro no hover */
+    background-color: #1DA851;
 }
 
 .whatsapp-fixed i {
@@ -475,46 +466,75 @@ body {
 }
 
 
-.about-image{
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente (no eixo X) */
-    align-items: center;   /* Centraliza verticalmente (no eixo Y) */
-    
-    /* Adicione isso para garantir que a imagem não "vaze" para fora da div se for muito grande */
-    overflow: hidden; 
-    
-    /* Mantém a altura e o estilo que já tínhamos para essa div */
-    flex: 1;
-    min-height: 400px;
-    background-color: #eee; /* Cor de fundo temporária para ver a div */
-    border-radius: 12px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-}
+/******************************************/
+/*** CORREÇÕES DE RESPONSIVIDADE ***/
+/******************************************/
 
+@media screen and (max-width: 992px) {
+    /* Mostra o ícone hambúrguer e esconde o menu normal */
+    .burger {
+        display: block;
+    }
 
-/* Responsividade (mantida do layout anterior, já bem adaptada) */
-@media (max-width: 992px) {
-    .main-header .container {
+    .main-nav {
+        position: absolute;
+        right: 0px;
+        top: 80px; /* Altura do header */
+        background-color: rgba(0, 7, 28, 0.98);
+        width: 60%;
+        height: calc(100vh - 80px);
+        display: flex;
         flex-direction: column;
-        gap: 15px;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%); /* Esconde o menu fora da tela */
+        transition: transform 0.5s ease-in;
     }
-    .main-nav ul {
-        gap: 20px;
+
+    .main-nav .nav-links {
+        flex-direction: column;
+        align-items: center;
     }
+
+    .nav-active {
+        transform: translateX(0%); /* Mostra o menu */
+    }
+
+    /* Animação para os links aparecerem */
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+
+    /* Animação para o ícone hambúrguer (vira um "X") */
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .toggle .line2 {
+        opacity: 0;
+    }
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    /* Ajustes gerais para tablets */
     .hero-content-modern h1 {
         font-size: 3.5em;
-    }
-    .hero-content-modern .hero-subtitle {
-        font-size: 0.9em;
     }
     .section-modern h2 {
         font-size: 2.5em;
     }
-    .section-about .container {
+    .section-about .container, .contact-grid-modern {
         flex-direction: column;
         text-align: center;
     }
-    .section-about .about-content h2 {
+    .section-about .about-content h2, .contact-details {
         text-align: center;
     }
     .section-about .about-image {
@@ -522,19 +542,12 @@ body {
         margin-bottom: 40px;
         min-height: 300px;
     }
-    .services-grid, .benefits-list, .contact-grid-modern {
+    .benefits-list {
         grid-template-columns: 1fr;
-    }
-    .service-card, .benefit-item-modern {
-        text-align: center;
-    }
-    .service-card .icon-service {
-        margin: 0 auto 25px auto;
     }
     .benefit-item-modern {
         flex-direction: column;
         align-items: center;
-        text-align: center;
     }
     .contact-details p {
         justify-content: center;
@@ -544,19 +557,14 @@ body {
     }
 }
 
-@media (max-width: 768px) {
-    .main-header .logo-img {
-        max-height: 35px;
-    }
-    .main-header.scrolled .logo-img {
-        max-height: 30px;
-    }
-    .main-nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+@media screen and (max-width: 768px) {
+    /* Ajustes de fonte para celulares */
     .hero-content-modern h1 {
         font-size: 2.8em;
+        line-height: 1.2;
+    }
+    .section-modern h2 {
+        font-size: 2.2em;
     }
     .btn-primary-modern, .btn-secondary-modern {
         padding: 15px 25px;
@@ -575,17 +583,21 @@ body {
     }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
+    /* Ajustes finos para telas bem pequenas */
     .hero-content-modern h1 {
-        font-size: 2em;
+        font-size: 2.2em;
     }
     .section-modern h2 {
         font-size: 2em;
     }
     .section-modern {
-        padding: 70px 0;
+        padding: 80px 15px; /* Reduz o padding lateral */
     }
-    .service-card, .benefit-item-modern {
+    .container {
+        padding: 0 15px;
+    }
+    .service-card {
         padding: 30px;
     }
     .whatsapp-fixed {
