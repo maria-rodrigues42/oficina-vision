@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VISION Auto Mecânica - Especialista em Birigui</title>
     <meta name="description" content="VISION Auto Mecânica em Birigui. Diagnóstico avançado, serviços de alta qualidade e atendimento premium. Fale Conosco!">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -27,6 +29,7 @@
                     <li><a href="#hero">Início</a></li>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#videos">Vídeos</a></li> 
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
@@ -42,7 +45,7 @@
         <div class="hero-overlay-dark"></div>
         <div class="container hero-content-modern">
             <p class="hero-subtitle">CUIDADO ESPECIALIZADO PARA O SEU VEÍCULO</p>
-            <h1>VISION Auto Mecânica: Sua Solução Premium em <span class="highlight">Birigui</span></h1>
+            <h1>VISION - a oficina de Confiança que Você Procura em <span class="highlight">Birigui</span></h1>
             <a href="https://wa.me/5518996121220?text=Olá! Vim pelo site da VISION Auto Mecânica e gostaria de um orçamento." class="btn-primary-modern btn-large-modern">
                 <i class="fab fa-whatsapp"></i> Solicite um Orçamento Agora
             </a>
@@ -75,11 +78,6 @@
                     <i class="fas fa-wrench icon-service"></i>
                     <h3>Manutenção Preventiva</h3>
                     <p>Revisões completas para evitar problemas e prolongar a vida útil do seu carro.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-car-battery icon-service"></i>
-                    <h3>Elétrica e Baterias</h3>
-                    <p>Diagnóstico e reparo de sistemas elétricos e troca de baterias com garantia.</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-oil-can icon-service"></i>
@@ -130,6 +128,41 @@
         </div>
     </section>
 
+    <section id="videos" class="section-modern bg-dark-section">
+        <div class="container">
+            <p class="section-tagline">NOSSO TRABALHO EM AÇÃO</p>
+            <h2>Veja Nossos Destaques</h2>
+            
+            <div id="carouselVideoExample" class="carousel slide carousel-fade" data-mdb-carousel-init>
+                <div class="carousel-indicators">
+                    <button type="button" data-mdb-target="#carouselVideoExample" data-mdb-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" data-mdb-button-init></button>
+                    <button type="button" data-mdb-target="#carouselVideoExample" data-mdb-slide-to="1" aria-label="Slide 2" data-mdb-button-init></button>
+                    <button type="button" data-mdb-target="#carouselVideoExample" data-mdb-slide-to="2" aria-label="Slide 3" data-mdb-button-init></button>
+                    <button type="button" data-mdb-target="#carouselVideoExample" data-mdb-slide-to="3" aria-label="Slide 4" data-mdb-button-init></button>
+                    <button type="button" data-mdb-target="#carouselVideoExample" data-mdb-slide-to="4" aria-label="Slide 5" data-mdb-button-init></button>
+                    <button type="button" data-mdb-target="#carouselVideoExample" data-mdb-slide-to="5" aria-label="Slide 6" data-mdb-button-init></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active"><video class="img-fluid"><source src="videos/video1.mp4" type="video/mp4" /></video><div class="carousel-caption d-none d-md-block"><h5 class="caption-title">Diagnóstico Preciso</h5><p class="caption-text">Utilizamos tecnologia de ponta para encontrar a causa do problema.</p></div></div>
+                    <div class="carousel-item"><video class="img-fluid"><source src="videos/video2.mp4" type="video/mp4" /></video><div class="carousel-caption d-none d-md-block"><h5 class="caption-title">Revisão Completa</h5><p class="caption-text">Cuidando de cada detalhe para a sua segurança e tranquilidade.</p></div></div>
+                    <div class="carousel-item"><video class="img-fluid"><source src="videos/video3.mp4" type="video/mp4" /></video><div class="carousel-caption d-none d-md-block"><h5 class="caption-title">Troca de Componentes</h5><p class="caption-text">Apenas peças de alta qualidade para garantir a durabilidade do serviço.</p></div></div>
+                    <div class="carousel-item"><video class="img-fluid"><source src="videos/video4.mp4" type="video/mp4" /></video><div class="carousel-caption d-none d-md-block"><h5 class="caption-title">Alinhamento e Balanceamento</h5><p class="caption-text">Equipamentos modernos para a direção perfeita do seu veículo.</p></div></div>
+                    <div class="carousel-item"><video class="img-fluid"><source src="videos/video5.mp4" type="video/mp4" /></video><div class="carousel-caption d-none d-md-block"><h5 class="caption-title">Serviço de Qualidade</h5><p class="caption-text">Nossos clientes confiam na nossa dedicação e expertise.</p></div></div>
+                    <div class="carousel-item"><video class="img-fluid"><source src="videos/video6.mp4" type="video/mp4" /></video><div class="carousel-caption d-none d-md-block"><h5 class="caption-title">Atendimento Personalizado</h5><p class="caption-text">Entendemos sua necessidade para oferecer a melhor solução.</p></div></div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-mdb-target="#carouselVideoExample" data-mdb-slide="prev" data-mdb-button-init>
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-mdb-target="#carouselVideoExample" data-mdb-slide="next" data-mdb-button-init>
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
     <section id="cta-final" class="section-modern section-cta-final bg-gold-section">
         <div class="container">
             <h2>Pronto para Cuidar do Seu Carro?</h2>
@@ -145,17 +178,17 @@
             <p class="section-tagline">ONDE NOS ENCONTRAR</p>
             <h2>Nossa Localização em Birigui</h2>
             <div class="contact-grid-modern">
+                <div class="contact-map-modern">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3717.3461666781313!2d-50.339999999999996!3d-21.2973338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x949614cfce3754c7%3A0x2183f61add2b7355!2sR.%20Pedro%20%C3%81lvares%20Cabral%2C%20207%20-%20Centro%2C%20Birigui%20-%20SP%2C%2016200-105!5e0!3m2!1spt-BR!2sbr!4v1756344324401!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
                 <div class="contact-details">
-                    <p><i class="fas fa-map-marker-alt icon-contact"></i> <strong>Endereço:</strong> R. Pedro Álvares Cabral, 207 - Centro | Birigui - SP</p>
-                    <p><i class="fab fa-whatsapp icon-contact"></i> <strong>Telefone e WhatsApp:</strong> (18) 99612-1220</p>
-                    <p><i class="fas fa-clock icon-contact"></i> <strong>Horário:</strong> Seg. a Sex. 8h-18h</p>
+                    <p><i class="fas fa-map-marker-alt icon-contact"></i> <strong>Endereço:</strong><span>R. Pedro Álvares Cabral, 207 - Centro | Birigui - SP</span></p>
+                    <p><i class="fab fa-whatsapp icon-contact"></i> <strong>Telefone e WhatsApp:</strong><span>(18) 99612-1220</span></p>
+                    <p><i class="fas fa-clock icon-contact"></i> <strong>Horário:</strong><span>Seg. a Sex. 8h-18h</span></p>
                     <div class="social-links-modern">
                         <a href="https://www.facebook.com/share/19nn2vxxQE/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.instagram.com/visionautomecanica/" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
-                </div>
-                <div class="contact-map-modern">
-                    <iframe src="http://googleusercontent.com/maps/google.com/5" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
@@ -166,18 +199,17 @@
             <p>© 2025 VISION Auto Mecânica. Todos os direitos reservados.</p>
         </div>
     </footer>
-
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.umd.min.js"></script>
+    
     <script>
+        // Lógica para o menu hambúrguer responsivo
         const burger = document.querySelector('.burger');
         const nav = document.querySelector('.main-nav');
         const navLinks = document.querySelectorAll('.main-nav .nav-links li');
-
         const navSlide = () => {
             burger.addEventListener('click', () => {
-                // Alterna a classe 'nav-active' para mostrar/esconder o menu
                 nav.classList.toggle('nav-active');
-
-                // Animação dos links
                 navLinks.forEach((link, index) => {
                     if (link.style.animation) {
                         link.style.animation = '';
@@ -185,12 +217,11 @@
                         link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
                     }
                 });
-
-                // Animação do ícone do hambúrguer (transforma em "X")
                 burger.classList.toggle('toggle');
             });
         };
 
+        // Lógica para o header ficar sólido ao rolar a página
         const headerScroll = () => {
             window.addEventListener('scroll', () => {
                 const header = document.querySelector('.main-header');
@@ -202,8 +233,66 @@
             });
         };
 
-        navSlide();
-        headerScroll();
+        // Lógica para o carrossel de vídeo
+        const videoCarousel = () => {
+            const carouselElement = document.getElementById('carouselVideoExample');
+            if (!carouselElement) return;
+            
+            const carousel = new mdb.Carousel(carouselElement);
+            const videos = carouselElement.querySelectorAll('video');
+
+            const pauseAllVideos = () => {
+                videos.forEach(video => {
+                    video.pause();
+                });
+            };
+
+            const playActiveVideo = () => {
+                const activeItem = carouselElement.querySelector('.carousel-item.active');
+                if (activeItem) {
+                    const activeVideo = activeItem.querySelector('video');
+                    if (activeVideo) {
+                        activeVideo.currentTime = 0;
+                        activeVideo.play().catch(error => console.log("Autoplay impedido pelo navegador."));
+                    }
+                }
+            };
+            
+            carouselElement.addEventListener('slide.mdb.carousel', pauseAllVideos);
+            carouselElement.addEventListener('slid.mdb.carousel', playActiveVideo);
+
+            videos.forEach(video => {
+                video.addEventListener('ended', () => {
+                    carousel.next();
+                });
+                video.addEventListener('click', () => {
+                    if (video.paused) {
+                        video.play();
+                    } else {
+                        video.pause();
+                    }
+                });
+            });
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        playActiveVideo();
+                    } else {
+                        pauseAllVideos();
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            observer.observe(carouselElement);
+        };
+
+        // Roda todas as funções quando o documento estiver pronto
+        document.addEventListener('DOMContentLoaded', () => {
+            navSlide();
+            headerScroll();
+            videoCarousel();
+        });
     </script>
 </body>
 </html>

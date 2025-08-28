@@ -55,12 +55,10 @@ body {
     font-weight: 700;
 }
 
-/* Destaque para palavras */
 .highlight {
     color: var(--color-gold);
 }
 
-/* Cores de Fundo das Seções */
 .bg-dark-section {
     background-color: var(--color-dark-blue);
     color: var(--color-light-gray);
@@ -92,7 +90,6 @@ body {
     color: var(--color-dark-blue);
 }
 
-/* Botões Modernos */
 .btn-primary-modern, .btn-secondary-modern {
     display: inline-flex;
     align-items: center;
@@ -137,7 +134,6 @@ body {
     font-size: 1.3em;
 }
 
-/* Header Principal */
 .main-header {
     position: fixed;
     width: 100%;
@@ -162,7 +158,7 @@ body {
 }
 
 .main-header .logo-img {
-    max-height: 50px; /* Aumentado um pouco para melhor visualização */
+    max-height: 50px;
     transition: max-height 0.3s ease;
 }
 
@@ -187,7 +183,6 @@ body {
     color: var(--color-gold);
 }
 
-/* ADIÇÃO: Estilo do ícone hambúrguer (escondido em telas grandes) */
 .burger {
     display: none;
     cursor: pointer;
@@ -201,7 +196,6 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Hero Section (Inovador) */
 .hero-modern {
     position: relative;
     height: 100vh;
@@ -246,7 +240,6 @@ body {
     color: var(--color-white);
 }
 
-/* Seção Sobre Nós */
 .section-about .container {
     display: flex;
     align-items: center;
@@ -281,10 +274,9 @@ body {
 .about-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Cobre o container sem distorcer a imagem */
+    object-fit: cover;
 }
 
-/* Seção de Serviços */
 .section-services {
     background-color: var(--color-light-gray);
 }
@@ -325,12 +317,6 @@ body {
     font-weight: 700;
 }
 
-/* Seção Diferenciais/Benefícios */
-.section-benefits {
-    background-color: var(--color-dark-blue);
-    color: var(--color-light-gray);
-}
-
 .benefits-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
@@ -341,7 +327,7 @@ body {
 
 .benefit-item-modern {
     display: flex;
-    align-items: center; /* Alinhado ao centro para melhor visualização */
+    align-items: center;
     gap: 20px;
     background-color: rgba(192, 199, 206, 0.1);
     padding: 25px;
@@ -352,6 +338,64 @@ body {
     font-size: 2.5em;
     color: var(--color-gold);
     flex-shrink: 0;
+}
+
+/* =================================== */
+/* === ESTILOS DO CARROSSEL DE VÍDEOS === */
+/* =================================== */
+
+#videos .carousel {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    aspect-ratio: 16 / 9;
+    max-height: 70vh;
+    margin: 0 auto;
+}
+
+#videos .carousel-item,
+#videos .carousel-inner {
+    height: 100%;
+    width: 100%;
+}
+
+#videos .carousel-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    background-color: #000;
+    cursor: pointer;
+}
+
+#videos .carousel-caption {
+    background-color: rgba(0, 7, 28, 0.6);
+    border-radius: 8px;
+    padding: 15px 20px;
+    bottom: 5%;
+}
+
+#videos .carousel-caption .caption-title {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-gold);
+    font-weight: 700;
+}
+
+#videos .carousel-caption .caption-text {
+    color: var(--color-white);
+    font-size: 1em;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 8%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 7, 28, 0.5);
+    border-radius: 50%;
+    padding: 25px;
+    background-size: 50% 50%;
 }
 
 /* Seção CTA Final */
@@ -373,24 +417,20 @@ body {
 }
 
 /* Seção de Contato */
-.section-contact {
-    background-color: var(--color-light-gray);
-}
-
 .contact-grid-modern {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: 1fr 1fr; /* MUDANÇA: Colunas iguais no desktop */
     gap: 60px;
     text-align: left;
     margin-top: 60px;
-    align-items: center; /* Alinha os itens verticalmente */
+    align-items: center;
 }
 
 .contact-details p {
     margin-bottom: 20px;
     font-size: 1.1em;
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Alinha o ícone no topo */
     gap: 18px;
 }
 
@@ -398,8 +438,9 @@ body {
     font-size: 1.5em;
     color: var(--color-gold);
     flex-shrink: 0;
-    width: 25px; /* Define uma largura fixa para alinhar o texto */
+    width: 25px;
     text-align: center;
+    margin-top: 3px; /* Pequeno ajuste vertical */
 }
 
 .social-links-modern {
@@ -471,36 +512,39 @@ body {
 /******************************************/
 
 @media screen and (max-width: 992px) {
-    /* Mostra o ícone hambúrguer e esconde o menu normal */
     .burger {
         display: block;
     }
 
     .main-nav {
-        position: absolute;
+        position: fixed;
         right: 0px;
-        top: 80px; /* Altura do header */
+        top: 0px;
         background-color: rgba(0, 7, 28, 0.98);
-        width: 60%;
-        height: calc(100vh - 80px);
+        width: 100%;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
-        transform: translateX(100%); /* Esconde o menu fora da tela */
+        justify-content: center;
+        transform: translateX(100%);
         transition: transform 0.5s ease-in;
+        gap: 30px;
     }
 
     .main-nav .nav-links {
         flex-direction: column;
         align-items: center;
     }
-
-    .nav-active {
-        transform: translateX(0%); /* Mostra o menu */
+    
+    .main-nav .nav-links a {
+        font-size: 1.5em;
     }
 
-    /* Animação para os links aparecerem */
+    .nav-active {
+        transform: translateX(0%);
+    }
+
     @keyframes navLinkFade {
         from {
             opacity: 0;
@@ -512,7 +556,6 @@ body {
         }
     }
 
-    /* Animação para o ícone hambúrguer (vira um "X") */
     .toggle .line1 {
         transform: rotate(-45deg) translate(-5px, 6px);
     }
@@ -523,18 +566,17 @@ body {
         transform: rotate(45deg) translate(-5px, -6px);
     }
     
-    /* Ajustes gerais para tablets */
     .hero-content-modern h1 {
         font-size: 3.5em;
     }
     .section-modern h2 {
         font-size: 2.5em;
     }
-    .section-about .container, .contact-grid-modern {
+    .section-about .container {
         flex-direction: column;
         text-align: center;
     }
-    .section-about .about-content h2, .contact-details {
+    .section-about .about-content h2 {
         text-align: center;
     }
     .section-about .about-image {
@@ -549,16 +591,27 @@ body {
         flex-direction: column;
         align-items: center;
     }
-    .contact-details p {
-        justify-content: center;
+    
+    /* CORREÇÃO PRINCIPAL AQUI */
+    .contact-grid-modern {
+        grid-template-columns: 1fr; /* Faz os itens empilharem */
+        gap: 40px; /* Adiciona um espaço entre o mapa e as informações */
     }
+
+    .contact-details {
+        text-align: center; /* Centraliza o texto das informações */
+    }
+
+    .contact-details p {
+        justify-content: center; /* Centraliza o ícone e o texto juntos */
+    }
+
     .social-links-modern {
         justify-content: center;
     }
 }
 
 @media screen and (max-width: 768px) {
-    /* Ajustes de fonte para celulares */
     .hero-content-modern h1 {
         font-size: 2.8em;
         line-height: 1.2;
@@ -574,6 +627,20 @@ body {
         padding: 18px 35px;
         font-size: 1.1em;
     }
+    #videos .carousel {
+        aspect-ratio: 9 / 16;
+        max-width: 400px;
+        max-height: 80vh;
+    }
+    #videos .carousel-caption {
+        padding: 10px;
+    }
+    #videos .carousel-caption .caption-title {
+        font-size: 1.2em;
+    }
+    #videos .carousel-caption .caption-text {
+        font-size: 0.9em;
+    }
     .whatsapp-fixed a {
         padding: 12px 20px;
         font-size: 1em;
@@ -584,7 +651,6 @@ body {
 }
 
 @media screen and (max-width: 480px) {
-    /* Ajustes finos para telas bem pequenas */
     .hero-content-modern h1 {
         font-size: 2.2em;
     }
@@ -592,13 +658,18 @@ body {
         font-size: 2em;
     }
     .section-modern {
-        padding: 80px 15px; /* Reduz o padding lateral */
+        padding: 80px 15px;
     }
     .container {
         padding: 0 15px;
     }
     .service-card {
         padding: 30px;
+    }
+    #videos .carousel {
+        max-width: 90%;
+        max-height: 75vh;
+        aspect-ratio: 9 / 16;
     }
     .whatsapp-fixed {
         bottom: 20px;
