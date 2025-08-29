@@ -70,10 +70,8 @@ body {
     color: var(--color-gold);
 }
 
-
 .bg-light-section {
-    background-color: var(--color-light-gray);
-    color: var(--color-medium-gray);
+    background-color: #f0f2f5; /* Um cinza um pouco mais claro e moderno */
 }
 .bg-light-section h2 {
     color: var(--color-dark-blue);
@@ -277,10 +275,6 @@ body {
     object-fit: cover;
 }
 
-.section-services {
-    background-color: var(--color-light-gray);
-}
-
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -340,16 +334,10 @@ body {
     flex-shrink: 0;
 }
 
-/* =================================== */
-/* === ESTILOS DO CARROSSEL DE VÍDEOS === */
-/* =================================== */
-
 #videos .carousel {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 15px 30px rgba(0,0,0,0.3);
-    aspect-ratio: 16 / 9;
-    max-height: 70vh;
     margin: 0 auto;
 }
 
@@ -398,7 +386,55 @@ body {
     background-size: 50% 50%;
 }
 
-/* Seção CTA Final */
+/* ESTILOS DA SEÇÃO DE AVALIAÇÕES */
+.caixa-avaliacoes {
+    max-height: 500px; 
+    overflow-y: auto; 
+    background-color: var(--color-white);
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 10px 25px;
+    text-align: left;
+    margin-top: 60px;
+    box-shadow: inset 0 2px 10px rgba(0,0,0,0.05);
+}
+.comentario-card {
+    padding: 20px 5px;
+    border-bottom: 1px solid #e0e0e0; 
+}
+.comentario-card:last-child {
+    border-bottom: none;
+}
+.comentario-card h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-dark-blue);
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+.comentario-card .estrelas {
+    color: var(--color-gold);
+    margin-bottom: 10px;
+}
+.comentario-card p {
+    color: var(--color-medium-gray);
+    font-size: 1em;
+    line-height: 1.7;
+}
+.caixa-avaliacoes::-webkit-scrollbar {
+    width: 10px;
+}
+.caixa-avaliacoes::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+.caixa-avaliacoes::-webkit-scrollbar-thumb {
+    background: var(--color-dark-blue);
+    border-radius: 10px;
+}
+.caixa-avaliacoes::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gold);
+}
+
 .section-cta-final {
     background-color: var(--color-gold);
     color: var(--color-dark-blue);
@@ -416,10 +452,9 @@ body {
     font-weight: 300;
 }
 
-/* Seção de Contato */
 .contact-grid-modern {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* MUDANÇA: Colunas iguais no desktop */
+    grid-template-columns: 1fr 1fr;
     gap: 60px;
     text-align: left;
     margin-top: 60px;
@@ -430,17 +465,19 @@ body {
     margin-bottom: 20px;
     font-size: 1.1em;
     display: flex;
-    align-items: flex-start; /* Alinha o ícone no topo */
+    align-items: flex-start;
     gap: 18px;
 }
-
+.contact-details p span {
+    flex: 1;
+}
 .contact-details .icon-contact {
     font-size: 1.5em;
     color: var(--color-gold);
     flex-shrink: 0;
     width: 25px;
     text-align: center;
-    margin-top: 3px; /* Pequeno ajuste vertical */
+    margin-top: 3px;
 }
 
 .social-links-modern {
@@ -465,7 +502,6 @@ body {
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* Rodapé */
 .main-footer {
     background-color: var(--color-dark-blue);
     color: var(--color-light-gray);
@@ -474,7 +510,6 @@ body {
     font-size: 0.9em;
 }
 
-/* Botão Flutuante do WhatsApp */
 .whatsapp-fixed {
     position: fixed;
     bottom: 30px;
@@ -508,14 +543,13 @@ body {
 
 
 /******************************************/
-/*** CORREÇÕES DE RESPONSIVIDADE ***/
+/*** ÁREA DE RESPONSIVIDADE ***/
 /******************************************/
 
 @media screen and (max-width: 992px) {
     .burger {
         display: block;
     }
-
     .main-nav {
         position: fixed;
         right: 0px;
@@ -531,82 +565,49 @@ body {
         transition: transform 0.5s ease-in;
         gap: 30px;
     }
-
     .main-nav .nav-links {
         flex-direction: column;
         align-items: center;
     }
-    
     .main-nav .nav-links a {
         font-size: 1.5em;
     }
-
     .nav-active {
         transform: translateX(0%);
     }
-
     @keyframes navLinkFade {
-        from {
-            opacity: 0;
-            transform: translateX(50px);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0px);
-        }
+        from { opacity: 0; transform: translateX(50px); }
+        to { opacity: 1; transform: translateX(0px); }
     }
-
-    .toggle .line1 {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-    .toggle .line2 {
-        opacity: 0;
-    }
-    .toggle .line3 {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
+    .toggle .line1 { transform: rotate(-45deg) translate(-5px, 6px); }
+    .toggle .line2 { opacity: 0; }
+    .toggle .line3 { transform: rotate(45deg) translate(-5px, -6px); }
     
-    .hero-content-modern h1 {
-        font-size: 3.5em;
-    }
-    .section-modern h2 {
-        font-size: 2.5em;
-    }
+    .hero-content-modern h1 { font-size: 3.5em; }
+    .section-modern h2 { font-size: 2.5em; }
     .section-about .container {
         flex-direction: column;
         text-align: center;
     }
-    .section-about .about-content h2 {
-        text-align: center;
-    }
+    .section-about .about-content h2 { text-align: center; }
     .section-about .about-image {
         order: -1;
         margin-bottom: 40px;
         min-height: 300px;
     }
-    .benefits-list {
-        grid-template-columns: 1fr;
-    }
+    .benefits-list { grid-template-columns: 1fr; }
     .benefit-item-modern {
         flex-direction: column;
         align-items: center;
     }
-    
-    /* CORREÇÃO PRINCIPAL AQUI */
     .contact-grid-modern {
-        grid-template-columns: 1fr; /* Faz os itens empilharem */
-        gap: 40px; /* Adiciona um espaço entre o mapa e as informações */
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
-
-    .contact-details {
-        text-align: center; /* Centraliza o texto das informações */
+    .contact-details, .section-about .about-content {
+        text-align: center;
     }
-
-    .contact-details p {
-        justify-content: center; /* Centraliza o ícone e o texto juntos */
-    }
-
-    .social-links-modern {
+    .contact-details p, .social-links-modern {
         justify-content: center;
     }
 }
@@ -635,41 +636,38 @@ body {
     #videos .carousel-caption {
         padding: 10px;
     }
-    #videos .carousel-caption .caption-title {
-        font-size: 1.2em;
-    }
-    #videos .carousel-caption .caption-text {
-        font-size: 0.9em;
-    }
+    #videos .carousel-caption .caption-title { font-size: 1.2em; }
+    #videos .carousel-caption .caption-text { font-size: 0.9em; }
+
     .whatsapp-fixed a {
         padding: 12px 20px;
         font-size: 1em;
     }
-    .whatsapp-fixed i {
-        font-size: 1.3em;
+    .whatsapp-fixed i { font-size: 1.3em; }
+
+    .contact-details p {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: left;
     }
+    .contact-details p strong {
+       display: inline;
+       margin-right: 8px;
+    }
+    .contact-grid-modern { text-align: left; }
+    .social-links-modern { justify-content: flex-start; }
 }
 
 @media screen and (max-width: 480px) {
-    .hero-content-modern h1 {
-        font-size: 2.2em;
-    }
-    .section-modern h2 {
-        font-size: 2em;
-    }
-    .section-modern {
-        padding: 80px 15px;
-    }
-    .container {
-        padding: 0 15px;
-    }
-    .service-card {
-        padding: 30px;
-    }
+    .hero-content-modern h1 { font-size: 2.2em; }
+    .section-modern h2 { font-size: 2em; }
+    .section-modern { padding: 80px 15px; }
+    .container { padding: 0 15px; }
+    .service-card { padding: 30px; }
     #videos .carousel {
         max-width: 90%;
         max-height: 75vh;
-        aspect-ratio: 9 / 16;
     }
     .whatsapp-fixed {
         bottom: 20px;
